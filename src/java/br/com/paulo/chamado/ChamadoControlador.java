@@ -1,4 +1,4 @@
-package br.com.paulo.controlador;
+package br.com.paulo.chamado;
 
 import java.io.IOException;
 import java.io.PrintWriter;
