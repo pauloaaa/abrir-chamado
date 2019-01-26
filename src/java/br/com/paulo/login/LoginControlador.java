@@ -28,6 +28,16 @@ public class LoginControlador extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
 
+            String contextPath = ((HttpServletRequest) request).getContextPath();
+
+            System.out.println("contextPath = " + contextPath);
+
+            StringBuilder red = new StringBuilder();
+
+            red.append(contextPath).append("/menu.html");
+
+            ((HttpServletResponse) response).sendRedirect(red.toString());
+
         }
     }
 
