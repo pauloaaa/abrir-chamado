@@ -22,23 +22,12 @@ public class LoginControlador extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    PrintWriter out = null;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-
-            String contextPath = ((HttpServletRequest) request).getContextPath();
-
-            System.out.println("contextPath = " + contextPath);
-
-            StringBuilder red = new StringBuilder();
-
-            red.append(contextPath).append("/menu.html");
-
-            ((HttpServletResponse) response).sendRedirect(red.toString());
-
-        }
+        out = response.getWriter();
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -68,6 +57,21 @@ public class LoginControlador extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        
+        String login = request.getParameter("login");
+        String senha = request.getParameter("senha");
+        
+        System.out.println("login = " + login);
+        System.out.println("senha = " + senha);
+
+        String contextPath = ((HttpServletRequest) request).getContextPath();
+
+        StringBuilder red = new StringBuilder();
+
+        red.append(contextPath).append("/menu.html");
+
+        ((HttpServletResponse) response).sendRedirect(red.toString());
     }
 
     /**

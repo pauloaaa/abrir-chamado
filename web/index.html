@@ -3,20 +3,16 @@
         <title>.: Abrir Chamados :.</title>
         <meta charset="UTF-8"/>
         <link rel="icon" type="imagem/png" href="imagens/chamado.png" />
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/chamado.css">
     </head>
     <body>
-        <div class="wrapper fadeInDown">
-            <div id="formContent">
+        <div class="formulario">
+            <div>
                 <form action="LoginControlador" method="POST">
-                    <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuário">
-                    <input type="text" id="password" class="fadeIn third" name="login" placeholder="Senha">
-                    <input type="submit" class="fadeIn fourth" value="Entrar">
+                    <input type="text" id="login" name="login" placeholder="Usuário" >
+                    <input type="password" id="senha" name="senha" placeholder="Senha" >
+                    <input type="submit" id="entrar" name="entrar" value="Entrar">
                 </form>
-                <a class="underlineHover" href="#">Criar conta</a>
             </div>
         </div>
     </body>
